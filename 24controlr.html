@@ -1,0 +1,37 @@
+<!--
+AngularJS Controller
+- Applications in AngularJS are controlled by controllers.
+- Because of the immediate synchronization of the model and the view, the controller can be completely separated from the view, and simply concentrate on the model data.
+- Thanks to the data binding in AngularJS, the view will reflect any changes made in the controller.
+-->
+
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            FirstName: <input type="text" ng-model="firstName"></br>
+            LastName: <input type="text" ng-model="lastName"></br>
+        </br>
+        Full Name: {{ firstName + " " + lastName }}
+
+    </br>
+
+            <h1 ng-click="changeName()">{{ firstName }}</h1>
+        </div>
+
+        <script>
+            var app = angular.module("myApp", []);
+
+            app.controller("myCtrl", function($scope){
+                $scope.firstName = "John"; // AngularJS will invoke the controller with a $scope object.
+                //In AngularJS, $scope is the application object (the owner of application variables and functions).
+                $scope.lastName = "Doe";
+                $scope.changeName = function(){
+                    $scope.firstName = "Nelly";
+                }
+            });
+        </script>
+    </body>
+</html>

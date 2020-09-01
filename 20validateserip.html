@@ -1,0 +1,26 @@
+<!--
+Validate User Input
+-The ng-model directive can provide type validation for application data (number, e-mail, required):
+-->
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+        <form ng-app="myApp" ng-controller="myCtrl" name="myForm">
+            Email:
+            <input type="email" name="myEmailAdress" ng-model="myFormData.userEmail">
+            <span ng-show="isEmailValid()">Not Valid Email</span>
+        </form>
+
+        <p>Enter your Email</p>
+        <script src="./myEmailApp.js"></script>
+    </body>
+</html>
+
+<!-- 
+    -In the example above, the span will be displayed only if the expression in the ng-show attribute returns true.
+
+    - If the property in the ng-model attribute does not exist, AngularJS will create one for you.
+
+-->

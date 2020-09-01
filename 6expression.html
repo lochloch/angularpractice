@@ -1,0 +1,19 @@
+<!--AngularJS binds data to HTML using Expressions.
+AngularJS expressions can be written inside double braces: {{ expression }}.
+AngularJS expressions can also be written inside a directive: ng-bind="expression".
+
+
+----- AngularJS change the value of CSS properties
+-->
+
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+        <div ng-app="" ng-init="myCol='lightblue'">
+        <input style="background-color:{{ myCol }}" ng-model="myCol">
+        </div>
+    </body>
+</html>
+

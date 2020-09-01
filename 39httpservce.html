@@ -1,0 +1,28 @@
+<!--
+    The $http Service
+Use the $http service to request data from the server:
+-->
+
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <p>Today's welcome message:
+                <h1>{{ myWelcome }}</h1>
+            </p>
+        </div>
+
+        <script>
+            var app = angular.module("myApp", []);
+
+            app.controller("myCtrl", function($scope, $http){
+                $http.get('./welcome_39.html').then(function(response){
+                    console.log(response);
+                    $scope.myWelcome = response.data;
+                });
+            });
+        </script>
+    </body>
+</html>

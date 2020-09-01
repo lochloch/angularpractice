@@ -1,0 +1,22 @@
+<!--
+Data Binding
+- Data binding in AngularJS binds AngularJS expressions with AngularJS data.
+- {{ firstName }} is bound with ng-model="firstName".
+
+- In the next example two text fields are bound together with two ng-model directives:
+-->
+
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+        <div ng-app="" ng-init="quantity=1; price=5">
+            <h2>Cost Calculator</h2>
+            Quantity:<input type="number" ng-model="quantity">
+            Price: <input type="number" ng-model="price">
+            
+            <p>Toatal: {{ quantity * price }} </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!--
+AngularJS arrays are like JavaScript arrays:
+-->
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <body>
+        <div ng-app="" ng-init="points=[4, 32, 15, 67, 8]">
+            <p>Third Number:{{ points[2] }}</p>
+            <p>Fourth Number:<span ng-bind="points[3]"></span></p>
+        </div>
+    </body>
+</html>

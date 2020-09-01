@@ -1,0 +1,20 @@
+<!--
+The ng-init directive initializes AngularJS application variables.
+
+You can use data-ng-, instead of ng-, if you want to make your page HTML valid.
+
+
+-->
+
+<DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+        <div ng-app="" ng-init="firstName='John'">
+            <p>
+                My Name is <span ng-bind="firstName"></span>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!--
+Create new Directives
+- New directives are created by using the .directive function.
+-When naming a directive, you must use a camel case name, w3TestDirective, but when invoking it, you must use - separated name, w3-test-directive:
+-By adding a restrict property with the value "A", the directive can only be invoked by attributes:
+-->
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body ng-app="myApp">
+        <test-directive></test-directive>
+        
+        <script>
+            var app = angular.module("myApp", []);
+
+            app.directive("TestDirective", function(){
+                return {
+                    restrict: "A",
+                    template: "<h1>New Directive</h1>"
+                };
+            });
+        </script>
+    </body>
+</html>
+
+<!--  
+    The legal restrict values are:
+
+E for Element name
+A for Attribute
+C for Class
+M for Comment
+By default the value is EA, meaning that both Element names and attribute names can invoke the directive.
+-->

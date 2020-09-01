@@ -1,0 +1,17 @@
+<!--
+AngularJS strings are like JavaScript strings:
+
+
+-->
+<!DOCTYPE html>
+<html>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+
+    </script>
+    <body>
+        <div ng-app="" ng-init="firstName='John'; lastName='Doe'">
+            <p>Full Name is: {{ firstName + " " + lastName }} </p>
+            <p>Full Name: <span ng-bind="firstName + ' ' + lastName"></span></p>
+        </div>
+    </body>
+</html>

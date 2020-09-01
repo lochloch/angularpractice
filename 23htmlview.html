@@ -1,0 +1,30 @@
+<!--
+HTML View
+- The HTML container where the AngularJS application is displayed, is called the view.
+-The view has access to the model, and there are several ways of displaying model data in the view.
+- You can use the ng-bind directive, which will bind the innerHTML of the element to the specified model property:
+-->
+<!DOCTYPE html>
+<html>
+    <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+    <body>
+        <div ng-app="myApp" ng-controller="myCtrl">
+            <p ng-bind="firstName"></p>
+            <p>LastName: {{ lastName }}</p>
+            <input ng-model="firstName">
+            <!-- Use the ng-model directive to bind data from the model to the view on HTML controls (input, select, textarea)-->
+            <h1> {{ firstName }} </h1>
+            <!-- The ng-model directive provides a two-way binding between the model and the view. -->
+        </div>
+
+        <script>
+            var app = angular.module("myApp", []);
+
+            app.controller("myCtrl", function($scope){
+                $scope.firstName = "John";
+                $scope.lastName = "Doe";
+            });
+        </script>
+    </body>
+</html>
